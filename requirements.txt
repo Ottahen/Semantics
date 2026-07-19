@@ -1,0 +1,21 @@
+# Open-core (BSD 2-Clause) requirements — everything needed for `ctf --no-tui`.
+# Install with: pip install -r requirements.txt
+
+click>=8.1
+typer>=0.12
+rich>=13.7
+pyfiglet>=1.0
+python-dotenv>=1.0
+
+# Aider's own multi-provider LLM plumbing (OpenAI, Anthropic, Gemini, Ollama, ...).
+litellm>=1.55
+
+# Aider itself. Optional at the code level (core/agent.py degrades gracefully
+# without it) but required for repo-mapping, diff application, and git
+# integration to actually come from Aider as the design doc intends.
+aider-chat>=0.65
+
+# Pro license validation (checking a key is core; issuing one is dev-only,
+# see tools/generate_license.py).
+PyJWT>=2.7
+cryptography>=42.0

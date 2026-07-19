@@ -1,0 +1,14 @@
+# Pro/Enterprise requirements — everything under src/pro.
+# Install with: pip install -r requirements.txt -r requirements.pro.txt
+# (then: playwright install chromium)
+
+-r requirements.txt
+
+# Apple-level TUI
+textual>=0.60
+
+# Browser automation tool
+playwright>=1.44
+
+# MCP client
+mcp>=1.0
