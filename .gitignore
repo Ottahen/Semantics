@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/dist/
+dist/
+*.zip
+.env
+.venv/
+venv/
+
+# NEVER commit the license signing key. Only the public key is meant to ship.
+tools/license_private_key.pem
+
+# Artifacts produced by `ctf` runs
+semantics-artifact.zip
+*.semantics-artifact.zip
