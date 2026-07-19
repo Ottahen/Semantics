@@ -1,0 +1,136 @@
+/* Semantics TUI stylesheet — Apple-level dark theme.
+   Colors here must stay in sync with colors.py. */
+
+Screen {
+    background: #0b0b0f;
+    color: #f5f5f7;
+}
+
+/* ---------- Header / status bar (pinned, visionOS-ish) ---------- */
+#status-header {
+    dock: top;
+    height: 1;
+    background: #0b0b0f;
+    color: #f5f5f7;
+    border-bottom: solid #0a84ff;
+    padding: 0 2;
+}
+
+#status-header .phase {
+    color: #0a84ff;
+    text-style: bold;
+}
+
+#status-header .secondary {
+    color: #86868b;
+}
+
+/* ---------- Fixed bottom input, chat-style ---------- */
+#command-input-bar {
+    dock: bottom;
+    height: 3;
+    border: double #0a84ff;
+    background: #0b0b0f;
+    padding: 0 1;
+}
+
+#command-input-bar Input {
+    background: #0b0b0f;
+    color: #f5f5f7;
+    border: none;
+}
+
+/* ---------- Generic content panel ---------- */
+.panel {
+    border: round #5e5ce6;
+    background: #0b0b0f;
+    color: #f5f5f7;
+    padding: 1 2;
+    margin: 1 2;
+}
+
+.panel-title {
+    text-style: bold;
+    color: #f5f5f7;
+}
+
+/* ---------- Startup screen ---------- */
+#logo {
+    content-align: center middle;
+    text-align: center;
+    color: #0a84ff;
+    padding: 1 0;
+}
+
+#tagline-panel {
+    border: double #0a84ff;
+    content-align: center middle;
+    text-align: center;
+    color: #86868b;
+    height: auto;
+    margin: 0 2 1 2;
+}
+
+#init-steps {
+    border: round #5e5ce6;
+    padding: 1 2;
+    margin: 0 2;
+}
+
+.step-done { color: #30d158; }
+.step-pending { color: #86868b; }
+.step-warn { color: #ffd60a; }
+.step-error { color: #ff453a; }
+
+/* ---------- Analysis screen ---------- */
+#module-table {
+    margin: 1 2;
+}
+
+/* ---------- Planning screen ---------- */
+#plan-table {
+    margin: 1 2;
+}
+
+#plan-actions {
+    align: center middle;
+    height: 3;
+    margin: 0 2;
+}
+
+#plan-actions Button {
+    margin: 0 1;
+    min-width: 14;
+}
+
+/* ---------- Execution screen ---------- */
+.exec-step-title {
+    color: #f5f5f7;
+    text-style: bold;
+}
+
+.exec-step-detail {
+    color: #86868b;
+}
+
+ProgressBar > .bar--complete {
+    color: #30d158;
+}
+
+ProgressBar > .bar--indeterminate {
+    color: #0a84ff;
+}
+
+/* ---------- Completion screen ---------- */
+#summary-panel {
+    border: double #30d158;
+    margin: 1 2;
+    padding: 1 2;
+}
+
+#tips-panel {
+    border: round #86868b;
+    margin: 0 2 1 2;
+    padding: 0 2;
+    color: #86868b;
+}
