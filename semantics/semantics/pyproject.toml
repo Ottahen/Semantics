@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantics-ctf"
+version = "2.0.0"
+description = "Semantics — an autonomous AI coding agent with an Apple-level terminal experience, built on Aider."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "BSD-2-Clause (core) + Proprietary (src/pro, see LICENSE.enterprise)" }
+authors = [{ name = "Semantics" }]
+keywords = ["ai", "agent", "cli", "coding-assistant", "tui", "aider"]
+
+dependencies = [
+    "click>=8.1",
+    "typer>=0.12",
+    "rich>=13.7",
+    "pyfiglet>=1.0",
+    "python-dotenv>=1.0",
+    "litellm>=1.55",
+    "PyJWT>=2.7",
+    "cryptography>=42.0",
+]
+
+[project.optional-dependencies]
+# Aider itself — kept optional so `pip install semantics-ctf` (core only) stays light;
+# SemanticsAgent falls back to a standalone base class when this isn't installed.
+aider = ["aider-chat>=0.65"]
+
+# Everything under src/pro: TUI, browser automation, MCP client.
+pro = [
+    "textual>=0.60",
+    "playwright>=1.44",
+    "mcp>=1.0",
+]
+
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+ctf = "cli.main:entrypoint"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["core*", "pro*", "cli*"]
+
+[tool.setuptools.package-data]
+pro = ["tui/styles.tcss", "license_public_key.pem"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"

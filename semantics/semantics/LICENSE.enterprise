@@ -1,0 +1,50 @@
+SEMANTICS PRO / ENTERPRISE END-USER LICENSE AGREEMENT
+
+This license governs use of the software found under `src/pro/` ("Pro
+Software"): the Apple-level terminal UI, browser automation, MCP client,
+PicoClaw sub-agent integration, artifact packaging, and license
+validation modules. It does not cover `src/core/`, `src/cli/`, or
+`tests/`, which are licensed separately under the BSD 2-Clause License
+(see LICENSE).
+
+1. GRANT OF LICENSE
+   Subject to a valid, unexpired license key (validated per
+   `src/pro/license.py`) and payment of applicable fees, Semantics grants
+   You a non-exclusive, non-transferable, revocable license to install
+   and use the Pro Software for the number of seats specified in Your
+   license key.
+
+2. RESTRICTIONS
+   You may not: (a) reverse engineer, decompile, or disassemble the Pro
+   Software except to the extent applicable law expressly permits; (b)
+   redistribute, sublicense, rent, lease, or resell the Pro Software; (c)
+   remove or alter any proprietary notices; (d) use the Pro Software
+   beyond the seat count or expiry date encoded in Your license key; (e)
+   attempt to generate, forge, or tamper with license keys.
+
+3. OWNERSHIP
+   The Pro Software is licensed, not sold. Semantics retains all right,
+   title, and interest in and to the Pro Software, including all
+   intellectual property rights therein.
+
+4. NO WARRANTY
+   THE PRO SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+   NONINFRINGEMENT.
+
+5. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL SEMANTICS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+   LIABILITY ARISING FROM THE USE OF THE PRO SOFTWARE.
+
+6. TERMINATION
+   This license terminates automatically if You breach any of its terms,
+   or upon expiry of Your license key without renewal. Sections 3-5
+   survive termination.
+
+7. ENTERPRISE TERMS
+   Enterprise-tier customers are subject to a separate, individually
+   negotiated agreement that supersedes this EULA where applicable
+   (e.g. SLAs, custom deployment terms, and support commitments).
+
+For licensing inquiries: licensing@semantics.dev
